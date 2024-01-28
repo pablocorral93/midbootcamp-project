@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayFit App</title>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/healthy.jpeg') }}');
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+
+        h1 {
+    
+            
+            
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            color: #45a049;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+
+
+        
+        }
+        .clear-all-button { 
+
+            background-color: #4caf50;
+            cursor: pointer;
+            margin-top: 15px;
+            padding: 10px; /* Adjust the padding to make the box smaller */
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+        
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Style for the recommendation sections */
+        .recommendation-section {
+        background-color: #fff; /* Set background color */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px; /* Add margin to separate sections */
+        margin-bottom: 10px
+        }
+
+        .recommendation-section h2 {
+        color: #333; /* Set title color */
+        }
+
+        .recommendation-section p {
+        color: #555; /* Set text color */
+        }
+
+
+        p.error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>STAYFIT</h1>
+
+    {% if error %}
+        <p class="error-message">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" action="/">
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" required>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+
+        <label for="height">Height (cm):</label>
+        <input type="text" name="height" required>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="text" name="weight" required>
+
+        <label for="activity_level">Activity Level:</label>
+        <input type="text" name="activity_level" required>
+
+        <label for="diet_type">Diet Type:</label>
+        <input type="text" name="diet_type" required>
+
+        <label for="goal">Goal:</label>
+        <input type="text" name="goal" required>
+
+        <input type="submit" value="Get Recommendations">
+    </form>
+
+<!-- ... your existing HTML code ... -->
+
+{% if gym_routine or meal_recipes %}
+    <div class="recommendation-section">
+        <h2>Gym Routine:</h2>
+        <p>{{ gym_routine }}</p>
+    </div>
+
+    <div class="recommendation-section">
+        <h2>Meal Recipes:</h2>
+        <p>{{ meal_recipes }}</p>
+    </div>
+
+    <form method="get" action="/">
+        <input type="submit" value="Clear All" class="clear-all-button">
+    </form>
+{% endif %}
+
+<!-- ... rest of your HTML code ... -->
+
+
+</body>
+</html>
+
+

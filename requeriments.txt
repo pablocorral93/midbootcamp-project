@@ -1,0 +1,8 @@
+pandas
+matplotlib.pyplot
+seaborn
+scipy.stats
+
+Flask
+
+Openai
