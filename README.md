@@ -2,12 +2,13 @@
 Pablo Corral
 
 ## Content
-Project Description
-Hypotheses
-Dataset
-Workflow
-Organization
-Links
+- [Project Description](#project-description)
+- [Objective](#Objective)
+- [Hypotheses / Questions](#hypotheses-/-questions)
+- [Data Analysis](#Data Analysis)
+- [Conclusion](#Conclusion)
+- [Acknowledgments](#Acknowledgments)
+- [Contact Information](#ContactInformation)
 
 ## Project Description
 I believe physical activity and balanced nutrition play a pivotal role in enhancing physical health, mental well-being, and overall quality of life.
