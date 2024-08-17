@@ -5,7 +5,7 @@ Pablo Corral
 - [Project Description](#project-description)
 - [Objective](#Objective)
 - [Hypotheses / Questions](#hypotheses-/-questions)
-- [Data Analysis](#Data Analysis)
+- [Data Analysis](#DataAnalysis)
 - [Conclusion](#Conclusion)
 - [Acknowledgments](#Acknowledgments)
 - [Contact Information](#ContactInformation)
@@ -46,6 +46,6 @@ Thank you to all the participants who contributed to this project by sharing the
 ## Contact Information
 For further information or questions regarding this project, please contact:
 
-Name: Pablo Corral Robles
-Email: pablocorralrobles@gmail.com
-LinkedIn: https://www.linkedin.com/in/pablo-corral-robles-2764b01b3/
+- Name: Pablo Corral Robles
+- Email: pablocorralrobles@gmail.com
+- LinkedIn: https://www.linkedin.com/in/pablo-corral-robles-2764b01b3/
